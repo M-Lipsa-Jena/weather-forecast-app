@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./WeatherApi.css" /> -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>Weather Fetching App</title>
+  </head>
+  <body>
+
+    <!-- * video -->
+    <video id="background-video" autoplay muted loop></video>
+
+
+    <!-- * Navbar -->
+    <header class="navbar">
+      <div class="left-info">
+        <div id="nav-location">
+          <i class="fas fa-map-marker-alt"> </i>
+          <span id="location-name"> City, Country</span>
+        </div>
+      </div>
+      <div class="search-wrapper">
+        <input
+          type="text"
+          id="city_input"
+          placeholder="Enter your city name"
+          aria-label="City name"
+        />
+        <button id="search_btn" aria-label="Search city">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="nav-actions">
+        <button class="toggle-mode" id="theme_toggle">🌙</button>
+        <button class="view-btn" id="today-btn">Today</button>
+        <button class="view-btn" id="daily-btn">Daily</button>
+        <button class="view-btn" id="hourly-btn">Hourly</button>
+      </div>
+    </header>
+
+    <!-- * Today's forecast section -->
+    <section id="today-section">
+      <div class="container">
+        <div class="current-card">
+          <!--*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+          <div class="current-info">
+            <div class="date-container">
+              <h1>Weather</h1>
+              <div class="time" id="time">12:30<span id="am-pm">PM</span></div>
+              <div class="date" id="date">Monday, 6 NOV</div>
+
+              <div class="others" id="current-weather-items"></div>
+
+            </div>
+
+            <div class="place-container">
+              <div class="time-zone" id="time-zone">Asia/Kolkata</div>
+              <div id="country" class="country">INDIA</div>
+            </div>
+          </div>
+          <!-- *>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- * daily forecast -->
+    <section id="daily-section">
+      <h1 class="daily-section-heading">Daily Forecast</h1>
+      <div class="Future-forecast">
+        <div class="today" id="current-temp">
+          <div class="today-item">
+            
+          </div>
+        </div>
+
+        <div class="weather-forecast" id="weather-forecast">
+          <div class="weather-forecast-item">
+            <div class="day">Tuesday</div>
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather icon"
+              class="w-icon"
+            />
+            <div class="temp">Temp - 25.6&#176; c</div>
+            <div class="feelslike">Feels Like - 35.6&#176; c</div>
+          </div>
+          <div class="weather-forecast-item">
+            <div class="day">Wednesday</div>
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather icon"
+              class="w-icon"
+            />
+            <div class="temp">Temp - 25.6&#176; c</div>
+            <div class="feelslike">Feels Like - 35.6&#176; c</div>
+          </div>
+          <div class="weather-forecast-item">
+            <div class="day">Thursday</div>
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather icon"
+              class="w-icon"
+            />
+            <div class="temp">Temp - 25.6&#176; c</div>
+            <div class="feelslike">Feels Like - 35.6&#176; c</div>
+          </div>
+          <div class="weather-forecast-item">
+            <div class="day">Friday</div>
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather icon"
+              class="w-icon"
+            />
+            <div class="temp">Temp - 25.6&#176; c</div>
+            <div class="feelslike">Feels Like - 35.6&#176; c</div>
+          </div>
+          <div class="weather-forecast-item">
+            <div class="day">Saturday</div>
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather icon"
+              class="w-icon"
+            />
+            <div class="temp">Temp - 25.6&#176; c</div>
+            <div class="feelslike">Feels Like - 35.6&#176; c</div>
+          </div>
+          <div class="weather-forecast-item">
+            <div class="day">Sunday</div>
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather icon"
+              class="w-icon"
+            />
+            <div class="temp">Temp - 25.6&#176; c</div>
+            <div class="feelslike">Feels Like - 35.6&#176; c</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- * Hourly Forecast-->
+    <section id="hourly-section">
+      <h1 class="hourly-forecast-heading">Hourly Forecast</h1>
+      <div id="hourly-forecast" class="hourly-forecast-section">
+
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

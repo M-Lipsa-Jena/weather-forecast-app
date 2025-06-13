@@ -1,0 +1,12 @@
+# Ignore environment files
+.env
+
+# Ignore node_modules
+node_modules/
+
+# Optional: Mac and Windows system files
+.DS_Store
+Thumbs.db
+
+# Local Netlify folder
+.netlify
