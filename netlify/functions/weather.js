@@ -1,11 +1,6 @@
 require("dotenv").config();
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
-// const fetch = require("node-fetch");
 
-// exports.handler = async function (event) {
-//   const API_KEY = process.env.API_KEY;
-
-//   const { lat, lon, city } = event.queryStringParameters;
 
 exports.handler = async function (event) {
   const API_KEY = process.env.API_KEY;
