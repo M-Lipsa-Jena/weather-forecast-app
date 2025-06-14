@@ -16,7 +16,8 @@ video.src = dayVideo;
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-// *>>>>>>>>>>> Theme toggle >>>>>>>>>>>>>>>>>>>>>>>>
+// *>>>>>>>>>----- Theme toggle -------->>>>>>>>>>>>>>>>
+
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
   body.classList.add("dark");
@@ -36,7 +37,8 @@ themeToggleBtn.addEventListener("click", () => {
   video.play();
 });
 
-//*>>>>>>>>>>>>>>>>>>> Scroll navbar >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//*>>>>>>>>>>>-------- Scroll navbar --------->>>>>>>>>>>>>
+
 document.getElementById("today-btn").onclick = () =>
   document.getElementById("today-section").scrollIntoView({ behavior: "smooth" });
 document.getElementById("daily-btn").onclick = () =>
@@ -44,7 +46,7 @@ document.getElementById("daily-btn").onclick = () =>
 document.getElementById("hourly-btn").onclick = () =>
   document.getElementById("hourly-section").scrollIntoView({ behavior: "smooth" });
 
-//*>>>>>>>>>>>>>>>>>>> Live time >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//*>>>>>>>>>--------Live Time and Date --------->>>>>>>>>>>
 setInterval(() => {
   const time = new Date();
   const month = time.getMonth();
@@ -68,7 +70,8 @@ setInterval(() => {
   dateEl.innerHTML = days[day] + " , " + date + " " + months[month];
 }, 1000);
 
-//*>>>>>>>>>>>>>>>>>>>> Geolocation weather >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//*>>>>>>>>>>>>------- Geolocation weather ------------>>>>>>>>>>>>
+
 getWeatherDataByGeolocation();
 
 function getWeatherDataByGeolocation() {
@@ -95,7 +98,8 @@ function getWeatherDataByGeolocation() {
   );
 }
 
-//*>>>>>>>>>>>>>>>>> Search by city >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//*>>>>>>>>>>------ Search by city -------->>>>>>>>>>>>>>
+
 document.getElementById("search_btn").addEventListener("click", () => {
   const city = document.getElementById("city_input").value.trim();
   if (city) getWeatherDataByCity(city);
@@ -165,6 +169,8 @@ function showWeatherData(currentData, forecastData) {
     </div>
   `;
 
+// *>>>>>>>----- Today card------>>>>>>>>>>>>>>>>>>
+
   currentTempEl.innerHTML = `
     <div class="today-item">
       <div class="day">${moment().format("dddd")}</div>
@@ -174,6 +180,8 @@ function showWeatherData(currentData, forecastData) {
       <div class="feelslike">Feels Like: ${currentData.main.feels_like}&#176;C</div>
     </div>
   `;
+
+// * >>>>>>>>>------ Next five day card ------>>>>>>>>>>>>>>>>>>
 
   const nextFiveDaysForecast = forecastData.list.filter(item => item.dt_txt.includes("12:00:00"));
   let otherDayForecast = "";
@@ -189,6 +197,8 @@ function showWeatherData(currentData, forecastData) {
     `;
   });
   weatherForecastEl.innerHTML = otherDayForecast;
+
+// * >>>>>>>>-----Hourly forecast -------->>>>>>>>>>>>>>>>>>>>>
 
   const hourlyForecastEl = document.getElementById("hourly-forecast");
   const hourlyData = forecastData.list.slice(0, 12);

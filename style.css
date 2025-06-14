@@ -264,6 +264,7 @@ button,
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 8px;
   font-size: 20px;
   white-space: nowrap;
@@ -312,6 +313,7 @@ button,
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   border: 1px solid #eee;
   background: linear-gradient(
     145deg,
@@ -510,10 +512,10 @@ button,
   }
   .date-container h1 {
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 200;
   }
   .date-container .time {
-    font-size: 28px;
+    font-size: 30px;
   }
   .date-container #am-pm {
     font-size: 15px;
@@ -543,7 +545,7 @@ button,
   }
   .weather-description {
     margin-top: 0px;
-    font-size: 18px;
+    font-size: 15px;
   }
   /* !>>>>>>> Humidity, pressure, windspeed...... */
   .other-weather-items {
@@ -566,11 +568,12 @@ button,
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 15px;
     display: inline-block;
     width: 100%;
     flex-shrink: 0;
     padding: 13px;
+    text-align: center;
 
   }
   .other-weather-items::-webkit-scrollbar {
@@ -613,13 +616,15 @@ button,
 
   }
   .Future-forecast .today .today-item {
-    flex: 0 0 140px;
+    /* flex: 0 0 140px; */
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 195px;
-    padding: 8px;
+    width: 185px;
+    padding: 10px;
+    text-align: center;
   }
   .Future-forecast .today .today-item .weather_description,
   .Future-forecast .today .today-item .temp,
@@ -632,10 +637,11 @@ button,
     flex-wrap: nowrap;
     gap: 12px;
     flex: 0 0 auto;
+    
   }
   .weather-forecast-item {
-    flex: 0 0 auto;
-    width: 185px;
+    flex: 0 0 auto;    
+    width: 195px;
     padding: 8px;
     border-radius: 10px;
     text-align: center;
@@ -710,17 +716,18 @@ button,
     flex: 1;
   }
   .date-container h1 {
-    font-size: 25px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 200;
   }
   .date-container .time {
-    font-size: 48px;
+    font-size: 38px;
+    
   }
   .date-container #am-pm {
-    font-size: 28px;
+    font-size: 18px;
   }
   .date-container .date {
-    font-size: 25px;
+    font-size: 18px;
   }
   .current-info .others {
     display: flex;
@@ -731,19 +738,19 @@ button,
     margin-bottom: 5px;
   }
   .weather-info .temp {
-    font-size: 58px;
+    font-size: 45px;
   }
   .weather-info .feelslike {
-    font-size: 15px;
+    font-size: 13px;
     margin-left: 10px;
   }
   .weather-info .weather-main {
-    font-size: 15px;
+    font-size: 13px;
     margin-left: 10px;
   }
   .weather-description {
     margin-top: 0px;
-    font-size: 20px;
+    font-size: 15px;
   }
   /* !>>>>>>>>>>>>>> logtitude latitude >>>>>>>>>>>>>>*/
 
@@ -759,8 +766,8 @@ button,
     overflow-y: hidden;
     scroll-behavior: smooth;
     width: 100vw;
-    max-width: 515px;
-    padding: 0 12px 6px;
+    /* max-width: 515px; */
+    padding: 0 10px 6px;
     box-sizing: border-box;
     gap: 12px;
     white-space: nowrap;
@@ -772,11 +779,12 @@ button,
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    text-align: center;
+    font-size: 15px;
     display: inline-block;
     width: 100%;
     flex-shrink: 0;
-    padding: 20px;
+    padding: 15px;
  
   }
   .other-weather-items::-webkit-scrollbar {
@@ -817,13 +825,14 @@ button,
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 195px;
+    width: 175px;
     padding: 8px;
+    text-align: center;
   }
   .Future-forecast .today .today-item .weather_description,
   .Future-forecast .today .today-item .temp,
   .Future-forecast .today .today-item .feelslike {
-    font-size: 20px;
+    font-size: 18px;
   }
   .weather-forecast {
     display: flex;
@@ -833,23 +842,23 @@ button,
   }
   .weather-forecast-item {
     flex: 0 0 auto;
-    width: 185px;
+    width: 195px;
     padding: 8px;
     text-align: center;
   }
   .weather-forecast .weather-forecast-item .temp,
   .weather-forecast .weather-forecast-item .feelslike,
   .weather-forecast .weather-forecast-item .weather_description {
-    font-size: 20px;
+    font-size: 18px;
   }
   /* !>>>>>>>>>>>>>> Hourly forecast >>>>>>>>>>>*/
   .hourly-forecast-section .hourly-item {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    font-size: 12px;
-    max-width: 410px;
+    gap: 10px;
+    font-size: 13px;
+    max-width: 450px;
     width: 100%;
     margin: 10px 60px 24px;
     padding: 15px 10px;
@@ -880,7 +889,7 @@ button,
     flex: 1;
   }
   .date-container h1 {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 300;
   }
   .date-container .time {
@@ -914,7 +923,7 @@ button,
   }
   .weather-description {
     margin-top: 0px;
-    font-size: 30px;
+    font-size: 25px;
   }
   /* !>>>>>>>>>>>>>> logtitude latitude >>>>>>>>>>>>>>*/
 
@@ -944,6 +953,7 @@ button,
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 22px;
     display: inline-block;
     width: 100%;
@@ -991,6 +1001,7 @@ button,
     align-items: center;
     width: 195px;
     padding: 8px;
+    text-align: center;
   }
   .Future-forecast .today .today-item .weather_description,
   .Future-forecast .today .today-item .temp,
@@ -1005,7 +1016,7 @@ button,
   }
   .weather-forecast-item {
     flex: 0 0 auto;
-    width: 185px;
+    width: 210px;
     padding: 8px;
     text-align: center;
   }
@@ -1119,6 +1130,7 @@ button,
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 30px;
     display: inline-block;
     width: 100%;
@@ -1167,6 +1179,7 @@ button,
     align-items: center;
     width: 195px;
     padding: 8px;
+    text-align: center;
   }
   .Future-forecast .today .today-item .weather_description,
   .Future-forecast .today .today-item .temp,
@@ -1181,7 +1194,7 @@ button,
   }
   .weather-forecast-item {
     flex: 0 0 auto;
-    width: 185px;
+    width: 210px;
     padding: 8px;
     text-align: center;
   }
@@ -1308,6 +1321,7 @@ button,
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 20px;
     display: inline-block;
     width: 100%;
@@ -1339,7 +1353,6 @@ button,
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    box-sizing: border-box;
     margin: 0;
     -webkit-overflow-scrolling: touch;
   }
@@ -1359,6 +1372,7 @@ button,
     align-items: center;
     width: 195px;
     padding: 8px;
+    text-align: center;
   }
   .Future-forecast .today .today-item .weather_description,
   .Future-forecast .today .today-item .temp,
@@ -1373,7 +1387,7 @@ button,
   }
   .weather-forecast-item {
     flex: 0 0 auto;
-    width: 185px;
+    width: 210px;
     padding: 8px;
     text-align: center;
   }
@@ -1397,6 +1411,59 @@ button,
     width: 100%;
     margin: 10px 60px 24px 60px;
     padding: 15px 10px;
+  }
+
+}
+@media (min-width: 1280px) {
+
+    /* !>>>>>>>>>>>>>>>>>>  daily forcast >>>>>>>>>>>>>>>>>> */
+  /** five-day forecast becomes scrollable */
+  
+    #daily-section {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 24px;
+  }
+
+  .Future-forecast {
+    justify-content: center;
+    gap: 0;
+    padding: 0 1px 6px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    box-sizing: border-box;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .Future-forecast::-webkit-scrollbar {
+    display: none;
+  }
+  .Future-forecast .today {
+    flex: 0 0 auto;
+  }
+  .Future-forecast .today .today-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .weather-forecast {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0px;
+    flex: 0 0 auto;
+    padding: 0;
+  }
+  .weather-forecast-item {
+    flex: 0 0 auto;
+    padding: 8px;
+    text-align: center;
   }
 
 }
