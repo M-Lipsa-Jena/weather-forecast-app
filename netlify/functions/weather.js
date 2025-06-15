@@ -1,4 +1,8 @@
-require("dotenv").config();
+// Load .env only in development
+if (process.env.NODE_ENV !== 'production') {
+  require("dotenv").config();
+}
+
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 
