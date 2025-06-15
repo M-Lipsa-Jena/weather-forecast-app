@@ -183,8 +183,13 @@ function showWeatherData(currentData, forecastData) {
 
 // * >>>>>>>>>------ Next five day card ------>>>>>>>>>>>>>>>>>>
 
-  const nextFiveDaysForecast = forecastData.list.filter(item => item.dt_txt.includes("12:00:00"));
-  let otherDayForecast = "";
+  // const nextFiveDaysForecast = forecastData.list.filter(item => item.dt_txt.includes("12:00:00"));
+  const today = moment().format("YYYY-MM-DD");
+const nextFiveDaysForecast = forecastData.list.filter(item =>
+  item.dt_txt.includes("12:00:00") && !item.dt_txt.startsWith(today)
+).slice(0, 5);
+
+let otherDayForecast = "";
   nextFiveDaysForecast.forEach(day => {
     otherDayForecast += `
       <div class="weather-forecast-item">
