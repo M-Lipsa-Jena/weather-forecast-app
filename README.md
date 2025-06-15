@@ -8,7 +8,8 @@ This application allows users to get real-time weather information including **c
 
 ## 🔑 Key Features
 
-- 📍 Detects user's current location automatically
+- 📍 Auto-detects user’s current location via Geolocation API  
+- 🔎 Search by city name with instant forecast updates
 - ☀️ Displays today’s weather, hourly forecast, and 5-day outlook
 - 🌗 Day/Night theme with background video transitions
 - 🌐 Secure weather data fetching using Netlify Functions (API key protected)
@@ -16,9 +17,10 @@ This application allows users to get real-time weather information including **c
 
 ## 🧰 Technologies Used
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend/API:** OpenWeatherMap API via Netlify Functions
-- **Deployment:** GitHub + Netlify
+- **Frontend**: HTML, CSS, JavaScript  
+- **API Integration**: OpenWeatherMap API  
+- **Backend**: Netlify Functions (Node.js)  
+- **Deployment**: GitHub + Netlify  
 
 ## 📁 Folder Structure
 
@@ -36,11 +38,11 @@ weather-forecast-app/
 
 ## 🔐 API Security
 
-The API key is not exposed in the frontend. It is securely handled through a Netlify Function (`weather.js`), preventing misuse or public exposure.
+API keys are **not exposed** in frontend code. All weather data is fetched through a Netlify Function (`weather.js`) that securely handles requests on the server side.
 
 ## 🔗 Live Demo
 
-👉 [Live Website](https://your-netlify-link.netlify.app)  
+- 🌍 **Live Website**: [https://venerable-eclair-78e541.netlify.app/](https://venerable-eclair-78e541.netlify.app/)   
 👉 [GitHub Repository](https://github.com/M-Lipsa-Jena/weather-forecast-app)
 
 ---
